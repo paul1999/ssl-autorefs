@@ -14,11 +14,10 @@ if which dnf 2>/dev/null >/dev/null; then
   FLAGS="-y"
   echo "Detected dnf package manager"
 
-  dnf $FLAGS install cmake gcc-c++ zlib-devel protobuf-compiler boost-program-options qt-devel boost-devel
+  dnf $FLAGS install cmake gcc-c++ zlib-devel protobuf-compiler boost-program-options qt-devel boost-devel golang
 fi
 
 if [ $PKG_MGR_FOUND == 0 ]; then
   echo "Your distribution is not yet supported"
   exit 1
 fi
-
