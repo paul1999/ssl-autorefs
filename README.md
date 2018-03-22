@@ -10,8 +10,13 @@ git submodule update --init
 sudo ./installDeps.sh
 
 # Build all
-./build.sh
+./buildAll.sh
 
 # Run all
 ./runAll.sh
 ```
+## Configuration
+You can choose which implementation should be build with `buildAll.sh` and run with `runAll.sh` in the `activeImplementations.cfg` config file.
+
+## Tests
+The `test` folder contains scripts to initiate tests, like playing a log file and recording auto referee decisions.
