@@ -2,7 +2,7 @@
 
 mode=$1
 if [ -z "$mode" ]; then
-	mode=active
+	mode=passive
 fi
 
 cd tigers
