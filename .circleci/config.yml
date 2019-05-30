@@ -10,14 +10,14 @@ jobs:
         command: ./installDeps.sh
     - run:
         name: "Update GIT submodules"
-        comand: git submodule update --init
+        command: git submodule update --init
     - run:
         name: "Build"
         command: ./build_tigers.sh
 
   erforce:
     docker:
-            - image: ubuntu:18.04
+    - image: ubuntu:18.04
     steps:
     - checkout
     - run:
@@ -25,7 +25,7 @@ jobs:
         command: ./installDeps.sh
     - run:
         name: "Update GIT submodules"
-        comand: git submodule update --init
+        command: git submodule update --init
     - run:
         name: "Build"
         command: ./build_erforce.sh
