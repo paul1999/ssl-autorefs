@@ -37,6 +37,7 @@ if which apt-get 2>/dev/null >/dev/null; then
   FLAGS="-qq -y"
   echo "Detected apt-get package manager"
 
+  apt-get $FLAGS update
   apt-get $FLAGS install git
 
   echo "################################"
