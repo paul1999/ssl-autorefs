@@ -3,16 +3,4 @@
 	url = https://github.com/robotics-erlangen/autoref.git
 [submodule "tigers"]
 	path = tigers
-	url = https://gitlab.tigers-mannheim.de/open-source/AutoReferee.git
-[submodule "cmdragons"]
-	path = cmdragons
-	url = https://github.com/dzhu/ssl-autoref.git
-[submodule "test/ssl-logtools"]
-	path = test/ssl-logtools
-	url = https://github.com/RoboCup-SSL/ssl-logtools.git
-[submodule "test/ssl-refbox"]
-	path = test/ssl-refbox
-	url = https://github.com/RoboCup-SSL/ssl-refbox.git
-[submodule "ssl-autoref-consensus"]
-	path = ssl-autoref-consensus
-	url = https://github.com/RoboCup-SSL/ssl-autoref-consensus.git
+	url = https://github.com/TIGERs-Mannheim/AutoReferee.git
