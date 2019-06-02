@@ -10,7 +10,7 @@ jobs:
         command: ./installDeps.sh
     - run:
         name: "Update GIT submodules"
-        command: git submodule update --init
+        command: git submodule update --init --remote
     - run:
         name: "Build"
         command: ./build_tigers.sh
@@ -25,7 +25,7 @@ jobs:
         command: ./installDeps.sh
     - run:
         name: "Update GIT submodules"
-        command: git submodule update --init
+        command: git submodule update --init --remote
     - run:
         name: "Build"
         command: ./build_erforce.sh
