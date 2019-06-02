@@ -1,6 +1,8 @@
 [submodule "erforce"]
 	path = erforce
 	url = https://github.com/robotics-erlangen/autoref.git
+	branch = master
 [submodule "tigers"]
 	path = tigers
 	url = https://github.com/TIGERs-Mannheim/AutoReferee.git
+	branch = master
