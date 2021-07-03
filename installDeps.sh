@@ -30,8 +30,9 @@ fi
 if which apt-get 2>/dev/null >/dev/null; then
   PKG_MGR_FOUND=1
   FLAGS="-qq -y"
-  echo "Detected apt-get package manager"
+  echo "Detected apt package manager"
 
+  export DEBIAN_FRONTEND="noninteractive"
   apt-get $FLAGS update
   apt-get $FLAGS install git
 
