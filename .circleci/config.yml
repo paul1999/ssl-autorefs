@@ -9,9 +9,6 @@ jobs:
           name: "Install dependencies"
           command: ./installDeps.sh
       - run:
-          name: "Update GIT submodules"
-          command: git submodule update --init --remote
-      - run:
           name: "Update All"
           command: ./updateAll.sh
       - run:
