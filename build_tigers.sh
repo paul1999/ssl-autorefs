@@ -3,7 +3,7 @@
 set -e
 
 echo "######################################"
-echo "## Build TIGERs"
+echo "## Build TIGERs AutoRef"
 echo "######################################"
 
 cd tigers

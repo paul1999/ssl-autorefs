@@ -3,7 +3,7 @@
 # stop on errors
 set -e
 
-if [ "`id -nu`" != "root" ]; then
+if [ "$(id -nu)" != "root" ]; then
   echo "Must be called as root"
   exit 1
 fi
@@ -24,12 +24,7 @@ if which dnf 2>/dev/null >/dev/null; then
   echo "################################"
   echo "## tigers"
   echo "################################"
-  dnf $FLAGS install java-1.8.0-openjdk-devel maven
-
-  echo "################################"
-  echo "## cmdragons"
-  echo "################################"
-  dnf $FLAGS install cmake protobuf-compiler wxBase3 wxGTK3-devel
+  dnf $FLAGS install java-11-openjdk-devel
 fi
 
 if which apt-get 2>/dev/null >/dev/null; then
@@ -48,12 +43,7 @@ if which apt-get 2>/dev/null >/dev/null; then
   echo "################################"
   echo "## tigers"
   echo "################################"
-  apt-get $FLAGS install openjdk-8-jdk maven
-
-  echo "################################"
-  echo "## cmdragons"
-  echo "################################"
-  apt-get $FLAGS install libwxbase3.0-dev libwxgtk3.0-dev cmake protobuf-compiler
+  apt-get $FLAGS install openjdk-11-jdk
 fi
 
 if which pacman 2>/dev/null >/dev/null; then
@@ -71,12 +61,7 @@ if which pacman 2>/dev/null >/dev/null; then
   echo "################################"
   echo "## tigers"
   echo "################################"
-  pacman -S $FLAGS jdk8-openjdk maven
-
-  echo "################################"
-  echo "## cmdragons"
-  echo "################################"
-  pacman -S $FLAGS wxgtk-common cmake protobuf
+  pacman -S $FLAGS jdk11-openjdk
 fi
 
 if [ $PKG_MGR_FOUND == 0 ]; then

@@ -1,9 +1,4 @@
 #!/bin/sh
 
-mode=$1
-if [ -z "$mode" ]; then
-	mode=active
-fi
-
-cd tigers
-./run.sh $mode
+cd tigers || exit 1
+./run.sh "$@"

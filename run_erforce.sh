@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd erforce
+cd erforce || exit 1
 build/bin/autoref

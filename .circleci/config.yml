@@ -1,45 +1,28 @@
 version: 2
 jobs:
-  tigers:
+  build:
     docker:
-    - image: ubuntu:18.04
+      - image: ubuntu:20.04
     steps:
-    - checkout
-    - run:
-        name: "Install dependencies"
-        command: ./installDeps.sh
-    - run:
-        name: "Update GIT submodules"
-        command: git submodule update --init --remote
-    - run:
-        name: "Build"
-        command: ./build_tigers.sh
-
-  erforce:
-    docker:
-    - image: ubuntu:18.04
-    steps:
-    - checkout
-    - run:
-        name: "Install dependencies"
-        command: ./installDeps.sh
-    - run:
-        name: "Update GIT submodules"
-        command: git submodule update --init --remote
-    - run:
-        name: "Build"
-        command: ./build_erforce.sh
+      - checkout
+      - run:
+          name: "Install dependencies"
+          command: ./installDeps.sh
+      - run:
+          name: "Update GIT submodules"
+          command: git submodule update --init --remote
+      - run:
+          name: "Update All"
+          command: ./updateAll.sh
+      - run:
+          name: "Build All"
+          command: ./buildAll.sh
 
 workflows:
   version: 2
   main:
     jobs:
-    - tigers:
-        filters:
-          tags:
-            only: /.*/
-    - erforce:
-        filters:
-          tags:
-            only: /.*/
-
+      - build:
+          filters:
+            tags:
+              only: /.*/

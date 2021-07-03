@@ -6,7 +6,7 @@ else
   set -e
 fi
 
-impls=`cat activeImplementations.cfg`
+impls=$(cat activeImplementations.cfg)
 for b in $impls; do
-	./build_$b.sh
+	"./build_$b.sh"
 done

@@ -3,7 +3,7 @@
 set -e
 
 echo "######################################"
-echo "## Build ERforce"
+echo "## Build ER-force AutoRef"
 echo "######################################"
 
 cd erforce
