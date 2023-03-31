@@ -11,4 +11,4 @@ git submodule update --init --remote
 mkdir -p build
 cd build
 cmake ..
-make
+make -j"$(nproc)"
